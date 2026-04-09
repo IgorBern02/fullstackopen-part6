@@ -6,12 +6,11 @@ const AnecdoteList = () => {
   const anecdotes = useSelector((state) => state.anecdotes);
   const filter = useSelector((state) => state.filter || "");
 
-  const state = useSelector((state) => state);
-  console.log(state);
-
   const filteredAnecdotes = anecdotes
     .filter((anecdote) =>
-      anecdote.content.toLowerCase().includes(filter.toLowerCase()),
+      (anecdote.content || "")
+        .toLowerCase()
+        .includes((filter || "").toLowerCase()),
     )
     .sort((a, b) => b.votes - a.votes);
 
