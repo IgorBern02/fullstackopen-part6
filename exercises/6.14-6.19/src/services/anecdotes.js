@@ -16,7 +16,7 @@ export const createAnecdote = async (content) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ content, important: false, votes: 0 }),
+    body: JSON.stringify({ content, votes: 0 }),
   });
 
   if (!response.ok) {
@@ -26,4 +26,20 @@ export const createAnecdote = async (content) => {
   return await response.json();
 };
 
-export default { getAll, createAnecdote };
+export const voteAnecdote = async (anecdote) => {
+  const response = await fetch(`${baseUrl}/${anecdote.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ ...anecdote, votes: anecdote.votes + 1 }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to vote anecdote");
+  }
+
+  return await response.json();
+};
+
+export default { getAll, createAnecdote, voteAnecdote };
