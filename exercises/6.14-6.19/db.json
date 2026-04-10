@@ -31,32 +31,10 @@
       "votes": 0
     },
     {
-      "content": "teste",
-      "votes": 0,
-      "id": "TgmFE2GVOEA"
-    },
-    {
-      "content": "",
-      "votes": 0,
-      "id": "Y5bxsLOaJko"
-    },
-    {
-      "content": "",
+      "content": "64e6",
       "important": false,
       "votes": 0,
-      "id": "fMfP11Q8qi4"
-    },
-    {
-      "content": "asd",
-      "important": false,
-      "votes": 0,
-      "id": "8JphkWaVf8s"
-    },
-    {
-      "content": "xjg",
-      "important": false,
-      "votes": 0,
-      "id": "_zF7WkQVrHs"
+      "id": "_YPhlTIU8dw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
